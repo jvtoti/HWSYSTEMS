@@ -12,7 +12,7 @@ namespace HWSystems.Dao
     {
         public void Inserir(Aluguel a)
         {
-            String strConexaoAluguel = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoAluguel = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlAluguel = "insert into tb_alugueis" + "(id_veiculo, nome_cliente, data_saida, data_chegada, preco, status_aluguel) values" + "(@id_veiculo, @nome_cliente, @data_saida, @data_chegada, @preco, @status_aluguel);";
             MySqlConnection conAluguel = null;
             try
@@ -45,7 +45,7 @@ namespace HWSystems.Dao
         public void EditarTudo(Aluguel a)
         {
             //Edita o id do veiculo
-            String strConexaoVeiculo = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoVeiculo = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlVeiculo = "update tb_alugueis set id_veiculo = @id_veiculo  where id_aluguel =  @id_aluguel;";
             MySqlConnection conVeiculo = null;
             try
@@ -70,7 +70,7 @@ namespace HWSystems.Dao
             }
 
             //Edita o nome
-            String strConexaoNome = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoNome = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlNome = "update tb_alugueis set nome_cliente = @nome_cliente  where id_aluguel =  @id_aluguel;";
             MySqlConnection conNome = null;
             try
@@ -95,7 +95,7 @@ namespace HWSystems.Dao
             }
 
             //Edita a saida
-            String strConexaoSaida = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoSaida = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlSaida = "update tb_alugueis set data_saida = @data_saida  where id_aluguel =  @id_aluguel;";
             MySqlConnection conSaida = null;
             try
@@ -120,7 +120,7 @@ namespace HWSystems.Dao
             }
 
             //Edita a entrada
-            String strConexaoEntrada = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoEntrada = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlEntrada = "update tb_alugueis set data_chegada = @data_chegada  where id_aluguel =  @id_aluguel;";
             MySqlConnection conEntrada = null;
             try
@@ -145,7 +145,7 @@ namespace HWSystems.Dao
             }
 
             //Edita o preco
-            String strConexaoPreco = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoPreco = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlPreco = "update tb_alugueis set data_entrada = @data_entrada  where id_aluguel =  @id_aluguel;";
             MySqlConnection conPreco = null;
             try
@@ -173,7 +173,7 @@ namespace HWSystems.Dao
         public void EditarStatustus(Aluguel a)
         {
             //Edita a entrada
-            String strConexaoStatus = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoStatus = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlStatus = "update tb_alugueis set status_aluguel = @status_aluguel  where id_veiculo =  @id_veiculo;";
             MySqlConnection conStatus = null;
             try
@@ -200,7 +200,7 @@ namespace HWSystems.Dao
 
         public void Excluir(Aluguel a)
         {
-            String strConexaoExcluirv = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoExcluirv = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             String sqlExcluirv = "update tb_alugueis set fg_ativo = 0 where id_aluguel =  @id_aluguel;";
             MySqlConnection conExcluirv = null;
             try

@@ -239,7 +239,7 @@ namespace LoginForm
         {
 
             // Carrega os veiculos
-            String strConexao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             MySqlConnection con = null;
             try
             {
@@ -492,7 +492,7 @@ namespace LoginForm
         private void atualizarFuncionario_Click(object sender, EventArgs e)
         {
             // atualiza / carrega os funcionarios
-            String strConexao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             MySqlConnection con = null;
             try
             {
@@ -703,7 +703,7 @@ namespace LoginForm
         private void atualizarpaginaClientesBtn_Click(object sender, EventArgs e)
         {
             // Carrega os clientes
-            String strConexao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             MySqlConnection con = null;
             try
             {
@@ -947,7 +947,7 @@ namespace LoginForm
         private void atualizarViagemBtn_Click(object sender, EventArgs e)
         {
             //exibe as viagens
-            String strConexaoViagem = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexaoViagem = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             MySqlConnection conViagem = null;
             try
             {
@@ -1248,7 +1248,7 @@ namespace LoginForm
         private void button8_Click(object sender, EventArgs e)
         {
             // Carrega os alugueis
-            String strConexao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
+            String strConexao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
             MySqlConnection con = null;
             try
             {
