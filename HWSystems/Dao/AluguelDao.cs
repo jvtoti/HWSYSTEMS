@@ -198,7 +198,7 @@ namespace HWSystems.Dao
             }
         }
 
-        public void Excluir(Aluguel a)
+        public void Excluir(Aluguel c)
         {
             String strConexaoExcluirv = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlExcluirv = "update tb_alugueis set fg_ativo = 0 where id_aluguel =  @id_aluguel;";
