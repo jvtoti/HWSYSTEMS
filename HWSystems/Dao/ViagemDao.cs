@@ -13,7 +13,7 @@ namespace HWSystems.Dao
     {
         public void InserirViagem(viagem vj)
         {
-            String strConexaoViagem = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoViagem = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlViagem = "insert into tb_viagens" + "(id_veiculo, destino, data_saida, data_chegada, status_viagem) values" + "(@id_veiculo, @destino, @data_saida, @data_chegada, @status_viagem);";
             MySqlConnection conViagem = null;
             try
@@ -44,7 +44,7 @@ namespace HWSystems.Dao
 
         public void ExcluirViagens(viagem vj)
         {
-            String strConexaoExcluirv = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoExcluirv = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlExcluirv = "delete from tb_viagens where id_viagem =  @id_viagem;";
             MySqlConnection conExcluirv = null;
             try
@@ -71,7 +71,7 @@ namespace HWSystems.Dao
         public void EditarViagem(viagem vj)
         {
             // Edita o id do veiculo
-            String strConexaoPlaca = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoPlaca = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlPlaca = "update tb_viagens set id_veiculo = @id_veiculo  where id_viagem =  @id_viagem;";
             MySqlConnection conPlaca = null;
             try
@@ -96,7 +96,7 @@ namespace HWSystems.Dao
             }
 
             //edita o destino do veiculo
-            String strConexaoModelo = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoModelo = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlModelo = "update tb_viagens set destino = @destino  where id_viagem =  @id_viagem;";
             MySqlConnection conModelo = null;
             try
@@ -121,7 +121,7 @@ namespace HWSystems.Dao
             }
 
             // edita a data de saida
-            String strConexaoMarca = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoMarca = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlMarca = "update tb_viagens set data_saida = @data_saida  where id_viagem =  @id_viagem;";
             MySqlConnection conMarca = null;
             try
@@ -146,7 +146,7 @@ namespace HWSystems.Dao
             }
 
             //edita a data de chegada
-            String strConexaoCor = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCor = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCor = "update tb_viagens set data_chegada = @data_chegada  where id_viagem =  @id_viagem;";
             MySqlConnection conCor = null;
             try
@@ -177,7 +177,7 @@ namespace HWSystems.Dao
         public void EditarStatusViagem(viagem vj)
         {
             // Edita o id do veiculo
-            String strConexaoPlaca = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoPlaca = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlPlaca = "update tb_viagens set status_viagem = @status_viagem  where id_viagem =  @id_viagem;";
             MySqlConnection conPlaca = null;
             try

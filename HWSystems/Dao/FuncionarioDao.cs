@@ -13,7 +13,7 @@ namespace HWSystems.Dao
     {
         public void CadastrarFuncionario(Funcionario f)
         {
-            String strConexaoFuncionario = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoFuncionario = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlFuncionario = "insert into tb_funcionarios" +"" + "(id_funcionario, nome_funcionario, CPF_funcionario, email_funcionario, telefone_funcionario, cargo, salario) values" + "(@id_funcionario, @nome_funcionario, @CPF_funcionario, @email_funcionario, @telefone_funcionario, @cargo, @salario);";
             MySqlConnection conFuncionario = null;
             try
@@ -47,7 +47,7 @@ namespace HWSystems.Dao
         public void EditarTudoFuncionario(Funcionario f)
         {
             //Edita o nome
-            String strConexaoNome = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoNome = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlNome = "update tb_funcionarios set nome_funcionario = @nome_funcionario  where id_funcionario =  @id_funcionario;";
             MySqlConnection conNome = null;
             try
@@ -72,7 +72,7 @@ namespace HWSystems.Dao
             }
 
             //edita o CPF
-            String strConexaoCPF = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCPF = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCPF = "update tb_funcionarios set CPF_funcionario = @CPF_funcionario  where id_funcionario =  @id_funcionario;";
             MySqlConnection conCPF = null;
             try
@@ -97,7 +97,7 @@ namespace HWSystems.Dao
             }
 
             //edita o email
-            String strConexaoEmail = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoEmail = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlEmail = "update tb_funcionarios set email_funcionario = @email_funcionario  where id_funcionario =  @id_funcionario;";
             MySqlConnection conEmail = null;
             try
@@ -122,7 +122,7 @@ namespace HWSystems.Dao
             }
 
             //edita o telefone
-            String strConexaoTelefone = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoTelefone = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlTelefone = "update tb_funcionarios set telefone_funcionario = @telefone_funcionario  where id_funcionario =  @id_funcionario;";
             MySqlConnection conTelefone = null;
             try
@@ -147,7 +147,7 @@ namespace HWSystems.Dao
             }
 
             //edita o cargo
-            String strConexaoCargo = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCargo = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCargo = "update tb_funcionarios set cargo = @cargo  where id_funcionario =  @id_funcionario;";
             MySqlConnection conCargo = null;
             try
@@ -172,7 +172,7 @@ namespace HWSystems.Dao
             }
 
             //edita o salario
-            String strConexaoSalario = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoSalario = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlSalario = "update tb_funcionarios set salario = @salario  where id_funcionario =  @id_funcionario;";
             MySqlConnection conSalario = null;
             try
@@ -199,7 +199,7 @@ namespace HWSystems.Dao
 
         public void Excluir(Funcionario f)
         {
-            String strConexaoExcluir = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoExcluir = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlExcluir = "update tb_funcionarios set fg_ativo = 0 where id_funcionario =  @id_funcionario;";
             MySqlConnection conExcluir = null;
             try

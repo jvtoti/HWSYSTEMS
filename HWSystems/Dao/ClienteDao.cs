@@ -12,7 +12,7 @@ namespace HWSystems.Dao
     {
         public void Inserir(Cliente c)
         {
-            String strConexaoCliente = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCliente = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCliente = "insert into tb_clientes" + "(nome_cliente, CPF_CNPJ, CNH, email_cliente, telefone_cliente) values" + "(@nome_cliente, @CPF_CNPJ, @CNH, @email_cliente, @telefone_cliente);";
             MySqlConnection conCliente = null;
             try
@@ -45,7 +45,7 @@ namespace HWSystems.Dao
         public void EditarTudo(Cliente c)
         {
             //Edita o nome
-            String strConexaoNome = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoNome = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlNome = "update tb_clientes set nome_cliente = @nome_cliente  where id_cliente =  @id_cliente;";
             MySqlConnection conNome = null;
             try
@@ -69,7 +69,7 @@ namespace HWSystems.Dao
             }
 
             //Edita o CPF/CNPJ
-            String strConexaoCPFCNPG = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCPFCNPG = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCPFCNPG = "update tb_clientes set CPF_CNPJ = @CPF_CNPJ  where id_cliente =  @id_cliente;";
             MySqlConnection conCPFCNPG = null;
             try
@@ -93,7 +93,7 @@ namespace HWSystems.Dao
             }
 
             //Edita a CNH
-            String strConexaoCNH = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCNH = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCNH = "update tb_clientes set CNH = @CNH  where id_cliente =  @id_cliente;";
             MySqlConnection conCNH = null;
             try
@@ -117,7 +117,7 @@ namespace HWSystems.Dao
             }
 
             //Edita o email
-            String strConexaoEmail = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoEmail = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlEmail = "update tb_clientes set email_cliente = @email_cliente  where id_cliente =  @id_cliente;";
             MySqlConnection conEmail = null;
             try
@@ -141,7 +141,7 @@ namespace HWSystems.Dao
             }
 
             //Edita o telefone
-            String strConexaoTelefone = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoTelefone = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlTelefone = "update tb_clientes set telefone_cliente = @telefone_cliente  where id_cliente =  @id_cliente;";
             MySqlConnection conTelefone = null;
             try
@@ -167,7 +167,7 @@ namespace HWSystems.Dao
 
         public void Excluir(Cliente c)
         {
-            String strConexaoExcluir = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoExcluir = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlExcluir = "update tb_clientes set fg_ativo = 0 where id_cliente =  @id_cliente;";
             MySqlConnection conExcluir = null;
             try

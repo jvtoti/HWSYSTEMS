@@ -13,7 +13,7 @@ namespace HWSystems.Dao
     {
         public void Inserir(Veiculo v)
         {
-            String strConexao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sql = "insert into tb_veiculos" + "(placa, modelo, marca, cor, ano_fabricacao, ano_modelo, quilometragem, status_veiculo) values" + "(@placa, @modelo, @marca, @cor, @ano_fabricacao, @ano_modelo, @quilometragem, @status_veiculo);";
             MySqlConnection con = null;
             try
@@ -48,7 +48,7 @@ namespace HWSystems.Dao
         public void Editar(Veiculo v)
         {
             //Edita a placa
-            String strConexaoPlaca = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoPlaca = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlPlaca = "update tb_veiculos set placa = @placa  where id_veiculo =  @id_veiculo;";
             MySqlConnection conPlaca = null;
             try
@@ -73,7 +73,7 @@ namespace HWSystems.Dao
             }
 
             //edita o modelo
-            String strConexaoModelo = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoModelo = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlModelo = "update tb_veiculos set modelo = @modelo  where id_veiculo =  @id_veiculo;";
             MySqlConnection conModelo = null;
             try
@@ -98,7 +98,7 @@ namespace HWSystems.Dao
             }
 
             // edita a marca
-            String strConexaoMarca = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoMarca = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlMarca = "update tb_veiculos set marca = @marca  where id_veiculo =  @id_veiculo;";
             MySqlConnection conMarca = null;
             try
@@ -123,7 +123,7 @@ namespace HWSystems.Dao
             }
 
             //edita a cor
-            String strConexaoCor = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoCor = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlCor = "update tb_veiculos set Cor = @Cor  where id_veiculo =  @id_veiculo;";
             MySqlConnection conCor = null;
             try
@@ -148,7 +148,7 @@ namespace HWSystems.Dao
             }
 
             //edita o ano_fabricacao
-            String strConexaoano_fabricacao = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoano_fabricacao = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlano_fabricacao = "update tb_veiculos set ano_fabricacao = @ano_fabricacao  where id_veiculo =  @id_veiculo;";
             MySqlConnection conano_fabricacao = null;
             try
@@ -173,7 +173,7 @@ namespace HWSystems.Dao
             }
 
             //edita o ano_modelo
-            String strConexaoano_modelo = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoano_modelo = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlano_modelo = "update tb_veiculos set ano_modelo = @ano_modelo  where id_veiculo =  @id_veiculo;";
             MySqlConnection conano_modelo = null;
             try
@@ -198,7 +198,7 @@ namespace HWSystems.Dao
             }
 
             //edita a quilometragem
-            String strConexaoquilometragem = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoquilometragem = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlquilometragem = "update tb_veiculos set quilometragem = @quilometragem  where id_veiculo =  @id_veiculo;";
             MySqlConnection conquilometragem = null;
             try
@@ -226,7 +226,7 @@ namespace HWSystems.Dao
     
         public void excluir(Veiculo v)
         {
-            String strConexaoExcluir = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaoExcluir = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlExcluir = "update tb_veiculos set fg_ativo = 0 where id_veiculo =  @id_veiculo;";
             MySqlConnection conExcluir = null;
             try
@@ -252,7 +252,7 @@ namespace HWSystems.Dao
 
         public void EditarStatusVeiculo(Veiculo v)
         {
-            String strConexaostatus = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaostatus = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlstatus = "update tb_veiculos set status_veiculo = @status_veiculo  where id_veiculo =  @id_veiculo;";
             MySqlConnection constatus = null;
             try
@@ -279,7 +279,7 @@ namespace HWSystems.Dao
 
         public void EditarStatusVeiculo2(Veiculo v)
         {
-            String strConexaostatus = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaostatus = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlstatus = "update tb_veiculos set status_veiculo = @status_veiculo  where id_veiculo =  @id_veiculo;";
             MySqlConnection constatus = null;
             try
@@ -303,7 +303,7 @@ namespace HWSystems.Dao
                     constatus.Close();
             }
 
-            String strConexaostatusq = @"server=localhost;port=3306;database=hwsystemsData;userid=root;";
+            String strConexaostatusq = @"server=localhost;port=3307;database=hwsystems;userid=root;password=usbw";
             String sqlstatusq = "update tb_veiculos set quilometragem = @quilometragem  where id_veiculo =  @id_veiculo;";
             MySqlConnection constatusq = null;
             try
